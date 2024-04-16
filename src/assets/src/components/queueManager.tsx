@@ -34,7 +34,7 @@ interface AddAttendeeFormProps {
     onSubmit: (value: string, backend: string) => void;
 }
 
-function AddAttendeeForm(props: AddAttendeeFormProps) {
+export function AddAttendeeForm(props: AddAttendeeFormProps) {
     const [attendee, setAttendee] = useState('');
     const [selectedBackend, setSelectedBackend] = useState(props.defaultBackend);
     const [attendeeValidationResult, validateAndSetAttendeeResult, clearAttendeeResult] = useStringValidation(uniqnameSchema);
